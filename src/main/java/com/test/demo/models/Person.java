@@ -25,7 +25,7 @@ public class Person {
     private String name;
 
     public String getName() {
-        return String.format(Locale.ENGLISH, "Mi nombre es %s", name);
+        return name;
     }
 
     public void setName(String name) {
@@ -41,6 +41,6 @@ public class Person {
     }
 
     public String toString() {
-        return "Person(Name: " + this.name + ", aged " + this.age + ")";
+        return String.format(Locale.ENGLISH, "Person named $s aged $d", name, age);
     }
 }

@@ -20,15 +20,15 @@ public class PersonController implements WebMvcConfigurer {
 
     @GetMapping("/person")
     public String showPersonForm(Person person) {
-        return "form";
+        return "person";
     }
 
     @PostMapping("/person")
-    public String validatePersonForm(@Valid Person person, BindingResult bindingResult) {
+    public String submitPersonForm(@Valid Person person, BindingResult bindingResult) {
 
         //https://docs.spring.io/spring/docs/3.0.x/spring-framework-reference/html/validation.html
         if (bindingResult.hasErrors()) {
-            return "form";
+            return "person";
         }
         return "redirect:/results";
     }
