@@ -1,22 +1,21 @@
 package com.test.demo.models;
 
+import com.test.demo.constraints.NumberConstraint;
 import org.springframework.beans.factory.annotation.Value;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.util.Locale;
-//import javax.validation.constraints.Size;
 
 public class Person {
 
     @NotNull
-    @Min(value = 18)
-    @Max(value = 80)
-    @Min(value = 1, message = "Must be a whole number greater than 1")
+    //@Min(value = 18)
+    //@Max(value = 80)
+    //@Min(value = 1, message = "Must be a whole number greater than 1")
     //@Convert(StringHoursToIntegerConverter.class)
     //@NumberFormat(style = NumberFormat.Style.NUMBER)
     //@HoursWorkedConstraint
+    @NumberConstraint
     private Integer age;
 
     @NotNull

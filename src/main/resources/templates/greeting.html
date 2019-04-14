@@ -1,0 +1,13 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+</head>
+<body>
+<p th:text="'Hello, a new person named ' + ${name} + ' how are you!'"/>
+<label for="name">Your real name</label>
+<input id="name" name="name" th:value="${name}" type="text">
+<p>Go to rename <a href="/rename">here</a></p>
+</body>
+</html>
